@@ -4,12 +4,15 @@
   "scripts": {
   "heroku-postbuild": "ng build --prod",
     "ng": "ng",
-    "start": "ng serve",
+	"start": "node server.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e",
-	"deploy": "ng b --prod --base-href https://vinaysarode.github.io/recipeproject/ && npx ngh --dir=dist/recipeproject"
+    "e2e": "ng e2e"
+	},
+	"engines": {
+    "node": "12.4.0",
+    "npm": "6.9.0"
   },
   "private": true,
   "dependencies": {
@@ -22,6 +25,7 @@
     "@angular/platform-browser-dynamic": "^9.0.0",
     "@angular/router": "^9.0.0",
     "bootstrap": "3.3.7",
+	"express": "^4.17.1",
     "core-js": "^3.1.2",
     "rxjs": "^6.0.0",
     "rxjs-compat": "^6.0.0",
